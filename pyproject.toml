@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling>=1.25,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "iteravault"
+version = "0.1.0"
+description = "Local-first task feedback event store for evolving AI workflows"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+authors = [{ name = "IteraVault contributors" }]
+
+[project.scripts]
+iteravault = "iteravault.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/iteravault"]
